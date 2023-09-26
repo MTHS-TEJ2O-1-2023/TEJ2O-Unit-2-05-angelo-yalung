@@ -12,7 +12,6 @@ let temperature = input.temperature()
 
 input.onButtonPressed(Button.A, function () {
     temperature = input.temperature()
-    basic.showNumber(input.temperature())
     basic.showNumber(input.temperature() + 273.15)
     basic.showString('Kelvin')
 })
