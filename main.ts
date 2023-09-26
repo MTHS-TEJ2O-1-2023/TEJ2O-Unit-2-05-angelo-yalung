@@ -5,16 +5,14 @@
  * This program shows the current temperature in Kelvin
 */
 
-
 basic.clearScreen()
 basic.pause(1000)
 
-let temperature: number
-
-// Turns the temperature in degrees celsius into kelvin
+let temperature = input.temperature()
 
 input.onButtonPressed(Button.A, function () {
     temperature = input.temperature()
-    basic.showNumber(input.temperature() + 273)
+    basic.showNumber(input.temperature())
+    basic.showNumber(input.temperature() + 273.15)
     basic.showString('Kelvin')
 })
