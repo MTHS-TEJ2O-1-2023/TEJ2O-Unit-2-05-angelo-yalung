@@ -8,9 +8,16 @@
 basic.clearScreen()
 basic.pause(1000)
 
-let temperature = input.temperature()
+let temperature: number
+let kelvin: number
 
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.temperature() + 273)
-    basic.showString('Kelvin')
+  // actual caluclation
+  temperature = input.temperature()
+  kelvin = temperature + 273.15
+  kelvin = Math.round(kelvin)
+
+  // text
+  basic.clearScreen()
+  basic.showString('Temperature in Kelvin is:' + kelvin.toString())
 })
